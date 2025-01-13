@@ -16,6 +16,7 @@ download:
   - { type: "GitHub", url: "" }
 categories:
   - Databases
+excerpt: some excerpt index
 ---
 
 The Kafka JSON Converter is a component used in Kafka Connect to handle the serialization and deserialization of data in JSON (JavaScript Object Notation) format. It is commonly used for its simplicity and human-readable format, making it a popular choice for many Kafka Connect deployments.

@@ -2,6 +2,7 @@
 order: 1
 forID: converter-json
 categories: [converters]
+excerpt: some excerpt installation
 ---
 
 The JSON converter is included by default in Kafka Connect, and it is part of the `connect-json-<version>.jar` file that comes with your Kafka distribution. This means that you do not need to perform any additional installation steps to use the JSON converter with Kafka Connect.

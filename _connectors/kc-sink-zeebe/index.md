@@ -5,6 +5,7 @@ connectorID: kc-sink-zeebe
 direction: sink
 support: community
 type: kafkaConnect
+excerpt: "Excertp of zeebe index"
 iconInitial: Zb
 iconGradient: 3
 documentationURL: https://github.com/camunda-community-hub/kafka-connect-zeebe

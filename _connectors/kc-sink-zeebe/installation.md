@@ -3,7 +3,7 @@ order: 1
 forID: kc-sink-zeebe
 categories: [sink]
 connectorTitle: "Zeebe"
-excerpt: "Excertp of zeebe index"
+excerpt: "Excertp of zeebe installation"
 ---
 
 To use the {{page.connectorTitle}} {{page.categories}} connector, complete the following steps:

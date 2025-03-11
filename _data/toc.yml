@@ -1,0 +1,27 @@
+  - title: Getting started
+    children:
+      - title: "How to think about documentation"
+        url: getting-started/how-to/
+      - title: "Jekyll"
+        url: getting-started/jekyll/
+      - title: "Start writing"
+        url: getting-started/process/
+      - title: "Writing tips and guidelines"
+        url: getting-started/writing/
+
+  - title: Publishing
+    children:
+      - title: "Publishing to Event Automation public repository"
+        url: publishing/publishing
+
+  - title: References
+    children:
+      - title: "Resources"
+        url: references/resources/
+      - title: "Repos and preview sites"
+        url: references/repos/
+      - title: "Video playback"
+        url: references/playback/
+
+        
+

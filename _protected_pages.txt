@@ -1,0 +1,5 @@
+_1.0/02-writing/01-structuring-and-writing.md examplepassword
+_1.0/02-writing/01-writing-guidelaines.md examplepassword
+example-2.html repo_by_evanbaldonado.com!
+example.html examplepassword
+

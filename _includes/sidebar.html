@@ -1,13 +1,12 @@
-{% assign version1Pages = site.collections | where: "product", page.product | sort: 'order' | reverse %}
-{% assign currentVersion = version1Pages | where: "label", page.collection | first %}
+{% assign version1Pages = site.collections | where: "version", "true" | sort: 'order' | reverse %}
+
 {% if page.author_profile or layout.author_profile or page.sidebar %}
-{% assign mastheadNavTitle = page.mastheadNavItem %}
-<div id="sidebarMask" class="sidebarMask">
+  <div id="sidebarMask" class="sidebarMask">
 
   </div>
   <div id="sidebar" class="sidebar sticky">
       <div aria-label="Change Version" role="button" aria-expanded="false"
-      {% if page.versioned %}
+      {% if page.version %}
         id="versionDropdown"
         tabindex="0"
         class="versionsBar"
@@ -17,9 +16,15 @@
       {% endif %} >
           <div class="selectedVersion" id="selectedVersion">
             <div class="versionContainer" >
-              {% if page.collection %}
-                <a id="versionPillCurrent" class="versionPill">{{ currentVersion.version }}</a>
+              {% if page.version %}
+                <a id="versionPillCurrent" class="versionPill">{{ page.collection }}</a>
                 <a class="versionChange">Change Version</a>
+              {% elsif page.latest %}
+                {% for collection in version1Pages reversed %}
+                  {% if collection.tag == "Latest" }} %}
+                    <a id="versionPillCurrent" class="disabled versionPill">{{ collection.label }}</a>
+                  {% endif %}
+                {% endfor %}
               {% endif %}
             </div>
           </div>
@@ -35,33 +40,37 @@
 
 
                     {% assign name = collection.label %}
-                    
+
+                    <!-- {% capture target_url_path %}{{ url_path | replace: page.collection, collection.label }}{% endcapture %} -->
+
                     {% capture collection_target %}
-                      {% if collection.tag != "Latest" %}
+                      {% if collection.tag != "Latest" }} %}
                         /{{ collection.label }}
                       {% endif %}
                     {% endcapture %}
 
-                    {% capture target_url_path %}{{ site.baseurl | strip }}/{{ page.product | strip }}{{ collection_target | replace: "//", "/" | strip }}{{ page.url | replace: page.collection | replace: "//", "/" | replace: "/ep" | replace: "/eem" | replace: "/es" }}{% endcapture %}
+                    {% capture target_url_path %}{{site.url | strip }}{{site.baseurl | strip }}{{collection_target | strip }}{{page.url | replace: page.collection | replace: "//", "/" }}{% endcapture %}
 
-                    <li class="version" data-url="{{ target_url_path | strip }}" onclick="openVersion('{{ target_url_path | strip}}','{{ name | strip }}')">
-                      <div class="pillContainer">
-                        {% if collection.label == page.collection %}
-                          {% assign activeCollection = "active" %}
-                        {% else %}
-                          {% assign activeCollection = "inactive" %}
-                        {% endif %}
-                        <a tabindex="-1" href="{{ target_url_path | strip}}" class="versionPill {{ activeCollection }}">{{ collection.version }}</a>
-                      </div>
-                      <div class="activeContainer">
-                        {% if collection.label == page.collection %}
-                          <img alt="" src="{{ site.url }}{{ site.baseurl }}/images/checkbox.svg" />
-                        {% endif %}
-                      </div>
-                      <div class="latest">
-                        {{ collection.tag }}
-                      </div>
-                    </li>
+
+                    <li class="version" data-url="{{ target_url_path | strip }}" onclick="openVersion('{{ target_url_path | strip }}','{{ collection.label | strip }}')">
+
+                        <div class="pillContainer">
+                          {% if collection.label == page.collection }} %}
+                            {% assign activeCollection = "active" %}
+                          {% else %}
+                            {% assign activeCollection = "inactive" %}
+                          {% endif %}
+                          <a tabindex="-1" href="{{ target_url_path | strip }}" class="versionPill {{ activeCollection }}">{{ collection.label }}</a>
+                        </div>
+                        <div class="activeContainer">
+                            {% if collection.label == page.collection }} %}
+                            <img alt="" src="{{site.url}}{{ site.baseurl }}/images/checkbox.svg" />
+                            {% endif %}
+                        </div>
+                        <div class="latest">
+                            {{ collection.tag }}
+                        </div>
+                      </li>
 
                 {% endfor %}
 

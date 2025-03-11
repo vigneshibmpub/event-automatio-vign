@@ -44,9 +44,9 @@ active
   <button role="button" aria-labelledBy="heading{{ connectorID }}" tabindex="0" id="{{ connectorID }}"
     aria-label="Open connector {{ connector.title }}" class="card" {% if isAllConnectors %} {%- comment -%}use
     {{ connectorURL }} if first page is description{%- endcomment -%}
-    onclick="(()=>{connectorCard(this,'{{ theFirstSubPageURL }}');addHandlersForButtons();})()" {% else %} {%- comment -%}{%- endcomment -%}
+    onclick="connectorCard(this,'{{ theFirstSubPageURL }}');" {% else %} {%- comment -%}{%- endcomment -%}
     {%- comment -%}use {{ connectorURL }} if first page is description{%- endcomment -%}
-    onclick="(()=>{connectorCard(this,'{{ theFirstSubPageURL }}');addHandlersForButtons();})()" {% endif %}>
+    onclick="connectorCard(this,'{{ theFirstSubPageURL }}');" {% endif %}>
     <div class="cardContent">
       <div class="diagram {{ connector.direction }}">
         {% if connector.icon %}
@@ -64,25 +64,16 @@ active
       <div class="content">
         <div class="titleContent">
           <p class="secondary connectorType">
-            {% for category in connector.direction | downcase %}
-            {% if category == "converters"%}
-                      Converter 
-                      <!-- |  Output format is Converter | Kafka Connect-->
-                  {% elsif category == "transformations" %}
-                      Transformation 
-                      <!-- | Output format is Transformation | Kafka Connect-->
-                  {% else %}
-                      {{ category | capitalize }} connector 
-                      <!-- | Output format is Source connector | Kafka Connect-->
-            {% endif %}
-              <!-- {% if connectorTagLowerCase == "kafkaconnect" %}
+            {% for category in connector.direction %}
+              {{ category | capitalize }} connector |
+              {% if connectorTagLowerCase == "kafkaconnect" %}
                 Kafka Connect
               {% else %}
                 {{ include.connectorType | default: "Other" }}
-              {% endif %}   Output format is Source connector | Other -->
+              {% endif %}
             {% endfor %}
           </p>
-          <h3 class="cardconnectorTitle" id="heading{{ connectorID }}">{{ connector.title }}</h3>
+          <h3 id="heading{{ connectorID }}">{{ connector.title }}</h3>
         </div>
         {% if include.connectorSupport == "IBM" %}
           <div class="pill supportLevel ibm">

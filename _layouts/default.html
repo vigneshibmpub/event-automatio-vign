@@ -11,11 +11,10 @@
   </head>
   <script src="{{ '/assets/animation/lottie.js' | relative_url }}" type="text/javascript"></script>
   <script src="{{ '/assets/js/connectors.js' | relative_url }}"></script>
-  <script src="{{ site.baseurl }}/assets/js/copytoclipboard.js"></script>
   <script src="{{ '/assets/js/highlighter.js' | relative_url }}"></script>
+  <script src="{{ site.baseurl }}/assets/js/copytoclipboard.js"></script>
 
-
-  {% if page.mastheadNavItem == "Event Streams" or page.mastheadNavItem == "Event Endpoint Management" or page.mastheadNavItem == "Event Processing"%}
+  {% if page.mastheadNavItem == "Documentation" %}
     {% assign checkURL = 'urlChecker()' %}
   {% else %}
     {% assign checkURL = '' %}

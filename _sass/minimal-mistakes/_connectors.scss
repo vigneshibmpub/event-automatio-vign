@@ -1,4 +1,4 @@
-$categories: all sink source converters transformations other;
+$categories: all sink source other;
 $panelWidth: 40rem;
 $panelTransition: .4s $easing;
 $paddingSides: 3rem;
@@ -87,8 +87,6 @@ $paddingSides: 3rem;
 
     .heroContainer {
       display: flex;
-      background-color: transparent;
-      color:black;
       flex-direction: column;
       height: auto;
       padding-left: 3rem;
@@ -173,7 +171,6 @@ $paddingSides: 3rem;
 
 
     .splashPanel {
-      color: transparent;
       transition: $panelTransition;
       flex-shrink: 0;
       flex-grow: 0;
@@ -302,8 +299,6 @@ $paddingSides: 3rem;
             }
 
             &.sink,
-            &.converters,
-            &.transformations,
             &.source {
               .kafkaConnectLabel {
                 border-bottom-color: $brand-01 !important;

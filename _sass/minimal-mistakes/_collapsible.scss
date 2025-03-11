@@ -64,21 +64,6 @@
     /*transition: background-color 0.5s ease-out; */
 
   }
-
-  .heading-anchor {
-    display: none;
-    margin-right: 0.5rem;
-    margin-left: 0.5rem;
-    color: #0062fe;
-  }
-
-  
-  h2:hover .heading-anchor,
-  h3:hover .heading-anchor,
-  h4:hover .heading-anchor {
-    display: inline-block;
-    color: #0062fe;
-  }
   
   .details:hover,
   .active .details {
@@ -124,43 +109,18 @@
   padding-left: 2rem;
   }
 
+  .heading-anchor {
+    display: none;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    color: #0062fe;
+  }
 
-.heading-anchor {
-  position: relative;
-}
-.heading-anchor::before {
-  content: "Copy";
-  position: absolute;
-  top: -20px; /* Adjust the top position */
-  right: 0; /* Set the right position to 0 */
-  transform: translateX(100%); /* Move the tooltip to the right */
-  background-color: #333;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: normal;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.heading-anchor:hover::before,
-.heading-anchor:focus::before {
-  opacity: 1;
-}
-
-.heading-anchor.show-anchorSVGText::after {
-  content: attr(data-anchorSVGText);
-  position: absolute;
-  top: -20px; /* Adjust the top position */
-  right: 0; /* Set the right position to 0 */
-  transform: translateX(100%); /* Move the tooltip to the right */
-  background-color: #333;
-  color: white;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 12px;
-  font-weight: normal; /* Add this rule */
-  z-index: 1;
-}
+  
+  h2:hover .heading-anchor,
+  h3:hover .heading-anchor,
+  h4:hover .heading-anchor {
+    display: inline-block;
+    color: #0062fe;
+  }
+  

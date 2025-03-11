@@ -5,10 +5,15 @@ collection: support
 permalink: /support/
 author_profile: false
 mastheadNavItem: Support
-sort_by: order
+sort_by: title
+# toc: true
 sections:
-  - name: IBM Event Automation support
-    description: Find support information for IBM Event Automation.
+  - name: Documentation support
+    description: Let us know what you think about the documentation guidance.
 ---
 
+## Release notes
 
+| Version | Release date   |
+|---------|----------------|
+| 1.0.0   | September 2023 | 

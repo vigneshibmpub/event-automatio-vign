@@ -11,7 +11,7 @@
     vertical-align: 0.2rem;
     margin-left: .25rem;
   }
-  & 
+  &.latestVersion {
     .heroContainer {
       background: #000;
       color: #fff;
@@ -25,7 +25,7 @@
         margin: 0;
       }
     }
-  
+  }
   .splashcontent {
     background: white;
     .section {
@@ -56,7 +56,6 @@
     display: none;
   }
     .heroContainer {
-      background: black;
       height: auto;
       padding-top: 4rem;
       margin-bottom: 4rem;
@@ -71,7 +70,6 @@
             grid-column-end: 4;
             .pictogramHero {
               align-self: flex-start;
-              padding-left: 1rem;
               margin-bottom: 2.5rem;
               height: 7.5rem;
             }

@@ -23,7 +23,6 @@
       {% assign connectorSupportGroup = connectorSupportGroup | push: connectorCard %}
     {% endif %}
   {% endfor %}
-  {% assign connectorSupportGroup = connectorSupportGroup | sort_natural %}
   {% include cardNameSort.html sortedItems=connectorSupportGroup %}
 
 

@@ -1,2 +1,1 @@
-# event-automation
-Documentation repo for Event Automation.
+Repository to store the source files of the Event Automation [docs playbook](https://pages.github.ibm.com/event-integration/ea-docs-playbook/).

@@ -7,13 +7,6 @@
     {% assign entries = entries | sort: 'title' %}
   {% endif %}
 
-{% elsif include.sort_by == 'order' %}
-  {% if include.sort_order  == 'reverse' %}
-    {% assign entries = entries | sort: 'order'  | reverse %}
-  {% else %}
-    {% assign entries = entries | sort: 'order' %}
-  {% endif %}
-
   {% if include.section %}
     {% assign entries = entries | where: 'section',include.section  %}
   {% endif %}
@@ -26,17 +19,14 @@
   {% endif %}
 {% endif %}
 
-{% assign entries = entries | default_sort %}
-
 {%- for post in entries -%}
   {% if post.cardType == "large" %}
-  {% if post.section == item.name %}
     <div class="card">
         <div class="largeCard">
           {% include archive-single.html %}
         </div>
     </div>
-  {% endif %}{% endif %}
+  {% endif %}
 {%- endfor -%}
 
 

@@ -519,6 +519,7 @@
 //   }
 // }
 
+
 .sidebar__right  {
   padding-top: 2rem;
   padding-right: 2rem;
@@ -527,7 +528,7 @@
   flex-basis: 20rem;
   .fixedSidebar {
     position: sticky;
-    top: 4rem;
+    top: 2rem;
   }
 }
 .toc__menu {
@@ -552,6 +553,12 @@
   li ul > li a {
     padding-left: 1rem;
     font-weight: lighter;
+  }
+
+
+  li ul > li a .active-link{
+    padding-left: 1rem;
+    font-weight: bold;
   }
 
   /* hide sub sub links on small screens*/

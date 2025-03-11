@@ -15,11 +15,7 @@ var store = [
         {%- assign teaser = site.teaser -%}
       {%- endif -%}
       {
-        {%- if doc.collection == "connectors" and doc.url contains "/installation" -%}
-        "title": {{ doc.connectorTitle | jsonify }},
-        {%- else -%}
         "title": {{ doc.title | jsonify }},
-        {%- endif -%}
         "collection": {{ doc.collection | jsonify }},
         "excerpt":
           {%- if site.search_full_content == true -%}

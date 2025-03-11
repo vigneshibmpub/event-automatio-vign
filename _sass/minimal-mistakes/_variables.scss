@@ -227,15 +227,6 @@ $standard-grid-layout: 1fr minmax(auto, 30rem) minmax(auto, 30rem) minmax(auto, 
       margin-right: auto;
       margin-top: 1rem;
    }
-   headerInsideCollection {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 0rem;
-      max-width: $maxW+10rem;
-      margin-left: auto;
-      margin-right: auto;
-      margin-top: 1rem;
-   }
    .page__inner-wrap {
       &:not(.splash) {
          .page__content {
@@ -254,23 +245,6 @@ $standard-grid-layout: 1fr minmax(auto, 30rem) minmax(auto, 30rem) minmax(auto, 
              }
          }
       }
-   }
-   .page__inner-wrap.splashcollection {
-         .page__content {
-            .content {
-               > *:not(table) {
-                  max-width: $maxW+10rem;
-                  margin-left: auto;
-                  margin-right: auto;
-                  margin-top: 1rem;
-               }
-               table {
-                  max-width: $maxW+10rem;
-                  margin-left: auto;
-                  margin-right: auto;
-               }
-             }
-         }
    }
    .page__inner-wrap.splash {
       .page__content {

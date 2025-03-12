@@ -1,5 +1,5 @@
-_1.0/02-writing/01-structuring-and-writing.md examplepassword
-_1.0/02-writing/01-writing-guidelaines.md examplepassword
+_site/getting-started/how-to/index.html examplepassword
+_site/getting-started/introduction/index.html examplepassword
 example-2.html repo_by_evanbaldonado.com!
 example.html examplepassword
 

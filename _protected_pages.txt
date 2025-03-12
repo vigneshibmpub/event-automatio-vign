@@ -1,5 +1,6 @@
 _site/getting-started/how-to/index.html examplepassword
 _site/getting-started/introduction/index.html examplepassword
+_pages/support.md examplepassword
 example-2.html repo_by_evanbaldonado.com!
 example.html examplepassword
 

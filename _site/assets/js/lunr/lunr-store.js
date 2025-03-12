@@ -5,12 +5,6 @@ var store = [{
         "tags": [],
         "url": "http://localhost:4000/event-automatio-vign/",
         "teaser":null},{
-        "title": "Introduction",
-        "collection": "1.0",
-        "excerpt":"The IBM Event Automation documentation provides ","categories": ["getting-started"],
-        "tags": [],
-        "url": "http://localhost:4000/event-automatio-vign/getting-started/introduction/",
-        "teaser":null},{
         "title": "How to think about documentation",
         "collection": "1.0",
         "excerpt":"Documentation is part of ","categories": ["getting-started"],

@@ -4,3 +4,4 @@ _pages/support.md examplepassword
 example-2.html repo_by_evanbaldonado.com!
 example.html examplepassword
 
+npx pagecrypt _1.0/01-getting-started/00-introduction.md _1.0/01-getting-started/00-introduction.md 12345
